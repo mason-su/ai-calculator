@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="calculator" aria-label="Calculator">
+        <h1 class="title">Calculator</h1>
+
+        <div class="display" aria-live="polite">
+          <div id="expression" class="expression" aria-label="Expression"></div>
+          <div id="result" class="result" aria-label="Result">0</div>
+        </div>
+
+        <div class="keys" role="group" aria-label="Calculator keys">
+          <button type="button" class="key key-action" data-action="clear">AC</button>
+          <button type="button" class="key key-action" data-action="backspace">⌫</button>
+          <button type="button" class="key key-operator" data-operator="/">÷</button>
+          <button type="button" class="key key-operator" data-operator="*">×</button>
+
+          <button type="button" class="key" data-digit="7">7</button>
+          <button type="button" class="key" data-digit="8">8</button>
+          <button type="button" class="key" data-digit="9">9</button>
+          <button type="button" class="key key-operator" data-operator="-">−</button>
+
+          <button type="button" class="key" data-digit="4">4</button>
+          <button type="button" class="key" data-digit="5">5</button>
+          <button type="button" class="key" data-digit="6">6</button>
+          <button type="button" class="key key-operator" data-operator="+">+</button>
+
+          <button type="button" class="key" data-digit="1">1</button>
+          <button type="button" class="key" data-digit="2">2</button>
+          <button type="button" class="key" data-digit="3">3</button>
+          <button type="button" class="key key-equals" data-action="equals">=</button>
+
+          <button type="button" class="key key-zero" data-digit="0">0</button>
+          <button type="button" class="key" data-digit=".">.</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="assertive"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
